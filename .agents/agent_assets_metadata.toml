@@ -72,3 +72,87 @@ id = "7w5qFCkNgUebQlHfGW83C"
 uri = "file://artifacts/safari-site/public/experience-new.jpg"
 type = "image"
 title = "African sunset silhouette acacia tree cinematic"
+
+[[outputs]]
+id = "7GgSFRyQDCb2N1D_xlUBM"
+uri = "file://artifacts/safari-site/public/sa-hero.jpg"
+type = "image"
+title = "Cape Town Table Mountain aerial sunset"
+
+[[outputs]]
+id = "nORaDk61Z8YYAcD4jPv5b"
+uri = "file://artifacts/safari-site/public/sa-union.jpg"
+type = "image"
+title = "Union Buildings Pretoria"
+
+[[outputs]]
+id = "Vlpvsq9i6G-EXg-_pnX7f"
+uri = "file://artifacts/safari-site/public/sa-table.jpg"
+type = "image"
+title = "Table Mountain Cape Town aerial"
+
+[[outputs]]
+id = "PMPjw7YE3qoQAPlSkx8Hf"
+uri = "file://artifacts/safari-site/public/sa-kruger.jpg"
+type = "image"
+title = "Kruger National Park Big Five lions"
+
+[[outputs]]
+id = "-t7uK5VbjzoVGBmtWkhh0"
+uri = "file://artifacts/safari-site/public/na-hero.jpg"
+type = "image"
+title = "Namibia desert dunes orange sunset aerial"
+
+[[outputs]]
+id = "XohqKMSaZNmKXb2PYnsJs"
+uri = "file://artifacts/safari-site/public/bw-hero.jpg"
+type = "image"
+title = "Okavango Delta Botswana aerial channels water"
+
+[[outputs]]
+id = "xQvmWrdEwP5c-RzYpB1Zh"
+uri = "file://artifacts/safari-site/public/mw-hero.jpg"
+type = "image"
+title = "Lake Malawi crystal blue water beach palm trees"
+
+[[outputs]]
+id = "50fEiVVOq3KSFbPf3cgXt"
+uri = "file://artifacts/safari-site/public/sa-blyde.jpg"
+type = "image"
+title = "Blyde River Canyon South Africa"
+
+[[outputs]]
+id = "9wA5IA-uY-5fmyu5bM3XF"
+uri = "file://artifacts/safari-site/public/na-sossusvlei.jpg"
+type = "image"
+title = "Sossusvlei red dunes sunrise"
+
+[[outputs]]
+id = "-nLEiFHf7srOeOeImHeG4"
+uri = "file://artifacts/safari-site/public/na-etosha.jpg"
+type = "image"
+title = "Etosha National Park elephants waterhole"
+
+[[outputs]]
+id = "_J3wlWUB--algruBu-bE1"
+uri = "file://artifacts/safari-site/public/bw-okavango.jpg"
+type = "image"
+title = "Okavango Delta channels from above"
+
+[[outputs]]
+id = "ky_IMV5Jr7S8LhggLsofj"
+uri = "file://artifacts/safari-site/public/bw-chobe.jpg"
+type = "image"
+title = "Chobe National Park elephants river"
+
+[[outputs]]
+id = "zPMxfHCHHVhjmb6AqMOt-"
+uri = "file://artifacts/safari-site/public/mw-lake.jpg"
+type = "image"
+title = "Lake Malawi clear water beach"
+
+[[outputs]]
+id = "oIoLABiOI3JLVhpjoigps"
+uri = "file://artifacts/safari-site/public/mw-liwonde.jpg"
+type = "image"
+title = "Liwonde National Park elephants river"

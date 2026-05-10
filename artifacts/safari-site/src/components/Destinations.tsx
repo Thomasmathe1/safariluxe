@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useLocation } from "wouter";
 
 const destinations = [
   {
@@ -36,6 +37,8 @@ const destinations = [
 ];
 
 export function Destinations() {
+  const [, setLocation] = useLocation();
+
   return (
     <section id="destinations" className="py-32 bg-background relative z-10">
       <div className="container mx-auto px-6">
@@ -63,7 +66,8 @@ export function Destinations() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group relative aspect-[4/5] overflow-hidden cursor-pointer bg-card"
-              data-testid={`destination-card-${dest.id}`}
+              data-testid={`destination-link-${dest.id}`}
+              onClick={() => setLocation(`/destinations/${dest.id}`)}
             >
               <img
                 src={dest.image}
@@ -95,7 +99,7 @@ export function Destinations() {
                     className="w-full py-4 border border-primary/50 bg-background/20 backdrop-blur-md text-primary uppercase tracking-widest text-xs font-medium group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
                     data-testid={`book-now-${dest.id}`}
                   >
-                    Book Now
+                    Discover More
                   </motion.button>
                 </div>
               </div>
