@@ -1,0 +1,38 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "SHyK2iAYO0XHnLtNpG2NQ"
+uri = "file://artifacts/safari-site/public/hero.jpg"
+type = "image"
+title = "luxury African safari sunset golden hour savanna elephant golden"
+
+[[outputs]]
+id = "KSRr0cPtoeCHGHcOgB7PS"
+uri = "file://artifacts/safari-site/public/south-africa.jpg"
+type = "image"
+title = "South Africa Kruger park safari landscape leopard"
+
+[[outputs]]
+id = "3axNFcWFeoVSEdE-GhRzI"
+uri = "file://artifacts/safari-site/public/namibia.jpg"
+type = "image"
+title = "Namibia Sossusvlei dunes dramatic golden sand"
+
+[[outputs]]
+id = "VEEYaWyTWppdDjVLfI4QT"
+uri = "file://artifacts/safari-site/public/botswana.jpg"
+type = "image"
+title = "Botswana Okavango Delta aerial wildlife"
+
+[[outputs]]
+id = "uZvN2APJxhsYZsPxOCx-5"
+uri = "file://artifacts/safari-site/public/malawi.jpg"
+type = "image"
+title = "Lake Malawi serene sunset luxury"
+
+[[outputs]]
+id = "WuVW5rRLKJpBTPOFfMPro"
+uri = "file://artifacts/safari-site/public/experience.jpg"
+type = "image"
+title = "cinematic african safari dramatic lion"
