@@ -135,7 +135,7 @@ export default function DestinationPage() {
           </motion.p>
 
           <motion.div
-            className="mt-10 flex justify-center gap-8"
+            className="mt-8 md:mt-10 hidden sm:flex justify-center gap-6 md:gap-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
@@ -143,7 +143,7 @@ export default function DestinationPage() {
             {experienceIcons.map((item, i) => (
               <div key={i} className="flex flex-col items-center gap-2">
                 <div
-                  className="w-10 h-10 flex items-center justify-center rounded-full text-primary"
+                  className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full text-primary"
                   style={{
                     background: "hsl(0 0% 0% / 0.45)",
                     backdropFilter: "blur(12px)",
@@ -177,8 +177,8 @@ export default function DestinationPage() {
       </section>
 
       {/* ── OVERVIEW ── */}
-      <section className="py-24 md:py-32 container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <section className="py-16 md:py-32 container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -518,8 +518,7 @@ export default function DestinationPage() {
                 transition={{ delay: pi * 0.12, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                 className="relative bg-background border-t-2 border-primary p-8 md:p-10 shadow-xl flex flex-col h-full group hover:shadow-primary/10 transition-shadow duration-500"
                 style={{ boxShadow: "0 8px 40px hsl(0 0% 0% / 0.45)" }}
-                whileHover={{ y: -4, boxShadow: "0 0 0 1px hsl(46 65% 52% / 0.3), 0 16px 48px hsl(0 0% 0% / 0.5)" }}
-                transition={{ duration: 0.35 }}
+                whileHover={{ y: -4, boxShadow: "0 0 0 1px hsl(46 65% 52% / 0.3), 0 16px 48px hsl(0 0% 0% / 0.5)", transition: { duration: 0.35 } }}
               >
                 <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-[10px] uppercase tracking-widest mb-6 rounded-sm self-start border border-primary/20">
                   {pkg.duration}
@@ -585,10 +584,10 @@ export default function DestinationPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ delay: i * 0.08, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative pl-20 md:pl-28 group"
+                  className="relative pl-16 md:pl-24 group"
                 >
                   <motion.div
-                    className="absolute left-0 md:left-4 top-0 w-12 h-12 rounded-full flex items-center justify-center font-serif font-bold text-lg border-2 border-primary"
+                    className="absolute -left-0 md:left-4 top-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-serif font-bold text-base md:text-lg border-2 border-primary"
                     style={{ background: "hsl(158 42% 10%)", color: "hsl(46 65% 52%)" }}
                     whileHover={{ scale: 1.1, borderColor: "hsl(46 65% 62%)" }}
                     transition={{ duration: 0.2 }}
@@ -597,7 +596,7 @@ export default function DestinationPage() {
                   </motion.div>
 
                   <div
-                    className="p-6 md:p-8 transition-all duration-400 group-hover:border-primary/25"
+                    className="p-5 md:p-8 transition-all duration-400 group-hover:border-primary/25"
                     style={{
                       background: "hsl(158 42% 10% / 0.35)",
                       border: "1px solid hsl(158 22% 16%)",

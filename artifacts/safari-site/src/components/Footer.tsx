@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer
       id="contact"
-      className="pt-24 pb-12 relative"
+      className="pt-16 md:pt-24 pb-10 md:pb-12 relative"
       style={{
         background: "linear-gradient(180deg, hsl(158 42% 7%) 0%, hsl(0 0% 5%) 100%)",
         borderTop: "1px solid hsl(46 65% 52% / 0.2)",
@@ -17,7 +17,7 @@ export function Footer() {
         }}
       />
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 mb-14 md:mb-20">
           <div className="md:col-span-2">
             <h2
               className="font-serif text-3xl text-primary mb-3"
@@ -91,7 +91,7 @@ export function Footer() {
         </div>
 
         <div
-          className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-foreground/35"
+          className="pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-xs font-light text-foreground/35 text-center"
           style={{ borderTop: "1px solid hsl(158 22% 14%)" }}
         >
           <p>&copy; {new Date().getFullYear()} SAFARILUXE. All rights reserved.</p>

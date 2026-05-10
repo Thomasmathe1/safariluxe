@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export function Experience() {
   return (
-    <section id="experience" className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
+    <section id="experience" className="relative min-h-[65vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden py-20 md:py-0">
       <div className="absolute inset-0 w-full h-full">
         <img
           src="/experience-new.jpg"
@@ -28,7 +28,7 @@ export function Experience() {
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1.3, ease: "easeOut" }}
-        className="relative z-10 max-w-4xl mx-auto px-6 text-center"
+        className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 text-center"
       >
         <span
           className="text-7xl font-serif leading-none block mb-4"
@@ -40,7 +40,7 @@ export function Experience() {
         >
           "
         </span>
-        <h2 className="text-3xl md:text-5xl font-serif text-foreground leading-snug mb-10">
+        <h2 className="text-2xl md:text-5xl font-serif text-foreground leading-snug mb-8 md:mb-10">
           The only man I envy is the man who has not yet been to Africa with SAFARILUXE, for he has so much to look forward to.
         </h2>
         <div

@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const PARTICLES = Array.from({ length: 28 }, (_, i) => ({
+const PARTICLES = Array.from({ length: 16 }, (_, i) => ({
   id: i,
   x: (i * 37.1 + 5) % 100,
   y: (i * 53.3 + 11) % 100,
@@ -118,7 +118,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="text-primary uppercase tracking-[0.45em] text-xs md:text-sm mb-7 font-medium"
+          className="text-primary uppercase tracking-[0.2em] md:tracking-[0.45em] text-[10px] md:text-sm mb-5 md:mb-7 font-medium"
           style={{ textShadow: "0 0 40px hsl(46 65% 52% / 0.45)" }}
         >
           EXTRAORDINARY AFRICAN JOURNEYS
@@ -128,7 +128,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 45 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.3, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-foreground leading-tight mb-8"
+          className="text-[2.6rem] sm:text-5xl md:text-7xl lg:text-8xl font-serif text-foreground leading-[1.12] mb-6 md:mb-8"
           style={{ textShadow: "0 4px 30px hsl(0 0% 0% / 0.55)" }}
         >
           Discover Africa{" "}
@@ -140,7 +140,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="text-foreground/72 max-w-xl text-lg md:text-xl font-light mb-14 leading-relaxed"
+          className="text-foreground/72 max-w-sm md:max-w-xl text-base md:text-xl font-light mb-10 md:mb-14 leading-relaxed px-2 md:px-0"
         >
           Bespoke wilderness journeys crafted for the discerning few. Pure Africa, uncompromised luxury.
         </motion.p>
@@ -149,7 +149,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1.15 }}
-          className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-none sm:w-auto"
         >
           <a
             href="#destinations"

@@ -155,32 +155,26 @@ export function Destinations() {
                 >
                   {dest.name}
                 </motion.h3>
-                <p className="text-foreground/68 font-light mb-8 text-sm leading-relaxed max-w-xs">
+                <p className="text-foreground/68 font-light mb-6 md:mb-8 text-sm leading-relaxed max-w-xs">
                   {dest.tagline}
                 </p>
 
-                <motion.div
-                  className="overflow-hidden"
-                  initial={{ height: 0, opacity: 0 }}
-                  whileHover={{ height: "auto", opacity: 1 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
+                <button
+                  className="w-full py-3.5 md:py-4 text-xs font-semibold uppercase tracking-[0.22em] transition-all duration-300
+                             opacity-100 translate-y-0
+                             md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0"
+                  style={{
+                    background: "hsl(158 42% 10% / 0.38)",
+                    backdropFilter: "blur(16px)",
+                    WebkitBackdropFilter: "blur(16px)",
+                    border: "1px solid hsl(46 65% 52% / 0.58)",
+                    color: "hsl(46 65% 52%)",
+                    boxShadow: "0 4px 22px hsl(0 0% 0% / 0.35), inset 0 1px 0 hsl(46 65% 52% / 0.12)",
+                  }}
+                  data-testid={`book-now-${dest.id}`}
                 >
-                  <button
-                    className="w-full py-4 text-xs font-semibold uppercase tracking-[0.22em] transition-all duration-300"
-                    style={{
-                      background: "hsl(158 42% 10% / 0.38)",
-                      backdropFilter: "blur(16px)",
-                      WebkitBackdropFilter: "blur(16px)",
-                      border: "1px solid hsl(46 65% 52% / 0.58)",
-                      color: "hsl(46 65% 52%)",
-                      boxShadow:
-                        "0 4px 22px hsl(0 0% 0% / 0.35), inset 0 1px 0 hsl(46 65% 52% / 0.12)",
-                    }}
-                    data-testid={`book-now-${dest.id}`}
-                  >
-                    Discover More →
-                  </button>
-                </motion.div>
+                  Discover More →
+                </button>
               </div>
             </motion.div>
           ))}

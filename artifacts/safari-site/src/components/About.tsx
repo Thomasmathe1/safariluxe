@@ -23,7 +23,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="py-32 relative"
+      className="py-20 md:py-32 relative"
       style={{
         background: "linear-gradient(180deg, hsl(158 32% 13%) 0%, hsl(158 28% 11%) 100%)",
         borderTop: "1px solid hsl(158 22% 18%)",
@@ -37,7 +37,7 @@ export function About() {
         }}
       />
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -46,10 +46,10 @@ export function About() {
             className="lg:w-1/2 flex flex-col justify-center"
           >
             <div className="gold-divider mb-8" />
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground leading-tight mb-8">
+            <h2 className="text-3xl md:text-5xl font-serif text-foreground leading-tight mb-6 md:mb-8">
               A New Standard <br /> of Exploration
             </h2>
-            <div className="space-y-6 text-foreground/70 font-light text-lg leading-relaxed">
+            <div className="space-y-5 text-foreground/70 font-light text-base md:text-lg leading-relaxed">
               <p>
                 We believe true luxury is access. Access to untouched landscapes, access to intimate wildlife encounters, and access to a level of service that anticipates needs before they arise.
               </p>
