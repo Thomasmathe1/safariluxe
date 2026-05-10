@@ -226,7 +226,7 @@ export default function DestinationPage() {
                   {pkg.duration}
                 </div>
                 <h3 className="text-2xl font-serif text-foreground mb-4">{pkg.name}</h3>
-                <div className="text-3xl text-primary font-serif mb-8">{pkg.price} <span className="text-sm text-foreground/50 font-sans font-light">pp</span></div>
+                <div className="text-sm text-primary uppercase tracking-[0.2em] font-medium mb-8">Pricing Available Upon Request</div>
                 
                 <p className="text-foreground/80 italic font-light text-sm mb-8 pb-8 border-b border-border">
                   "{pkg.highlight}"

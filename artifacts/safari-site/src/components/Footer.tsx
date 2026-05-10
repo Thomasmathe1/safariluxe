@@ -62,22 +62,21 @@ export function Footer() {
 
           <div>
             <h4 className="text-foreground/90 font-medium uppercase tracking-[0.2em] text-xs mb-6 pb-3" style={{ borderBottom: "1px solid hsl(158 22% 18%)" }}>Contact</h4>
-            <ul className="space-y-4 text-foreground/55 font-light text-sm">
-              <li>
-                <a href="mailto:concierge@safariluxe.com" className="hover:text-primary transition-colors duration-300">
-                  concierge@safariluxe.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+27115550199" className="hover:text-primary transition-colors duration-300">
-                  +27 11 555 0199
-                </a>
-              </li>
-              <li className="pt-2 leading-relaxed">
-                <p>124 Safari Way, Sandton</p>
-                <p>Johannesburg, South Africa</p>
-              </li>
-            </ul>
+            <div className="space-y-5">
+              <p className="text-foreground/45 font-light text-sm italic leading-relaxed">
+                Contact details coming soon.
+              </p>
+              <div
+                className="p-5 rounded-sm"
+                style={{
+                  background: "hsl(158 42% 10% / 0.5)",
+                  border: "1px solid hsl(46 65% 52% / 0.12)"
+                }}
+              >
+                <p className="text-xs uppercase tracking-[0.2em] text-primary/70 mb-1">Enquiries</p>
+                <p className="text-foreground/50 text-sm font-light">Available upon request</p>
+              </div>
+            </div>
           </div>
 
           <div>

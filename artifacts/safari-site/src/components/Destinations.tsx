@@ -6,7 +6,7 @@ const destinations = [
     id: "south-africa",
     name: "South Africa",
     tagline: "Where the Big Five roam the world's most celebrated wilderness.",
-    hint: "From $8,500 · 10 Days",
+    hint: "Tailored Luxury Experience",
     image: "/sa-new.jpg",
     flag: "🇿🇦"
   },
@@ -14,7 +14,7 @@ const destinations = [
     id: "namibia",
     name: "Namibia",
     tagline: "Ancient dunes, celestial skies and silence beyond measure.",
-    hint: "From $7,200 · 8 Days",
+    hint: "Custom Safari Package",
     image: "/na-new.jpg",
     flag: "🇳🇦"
   },
@@ -22,7 +22,7 @@ const destinations = [
     id: "botswana",
     name: "Botswana",
     tagline: "The Okavango Delta — Africa's last great Eden, untouched and infinite.",
-    hint: "From $12,000 · 9 Days",
+    hint: "Bespoke Wilderness Journey",
     image: "/bw-new.jpg",
     flag: "🇧🇼"
   },
@@ -30,7 +30,7 @@ const destinations = [
     id: "malawi",
     name: "Malawi",
     tagline: "Warm lakeshore sanctuaries where time dissolves into paradise.",
-    hint: "From $6,500 · 7 Days",
+    hint: "Affordable Luxury Package",
     image: "/mw-new.jpg",
     flag: "🇲🇼"
   }

@@ -52,7 +52,7 @@ export const destinations: Destination[] = [
     heroImage: "/sa-hero.jpg",
     tagline: "Where the Big Five roam the world's most celebrated wilderness.",
     overview: "South Africa offers an unparalleled blend of raw African wilderness and cosmopolitan luxury. From the iconic silhouette of Table Mountain to the untamed expanses of the Kruger National Park, every moment is crafted to perfection. Experience world-class vintage wines, profound cultural heritage, and legendary wildlife encounters.",
-    hint: "From $8,500 · 10 Days",
+    hint: "Tailored Luxury Experience",
     bestTimeToVisit: {
       months: "May to September",
       reason: "Dry winter months offer the best game viewing as animals congregate around water sources.",
@@ -137,7 +137,7 @@ export const destinations: Destination[] = [
         id: "kruger-elite",
         name: "Kruger Elite Safari",
         duration: "10 Days 9 Nights",
-        price: "$8,500",
+        price: "Pricing Available Upon Request",
         includes: ["Private game drives twice daily", "5-star lodge accommodation", "All meals and premium beverages", "Chartered bush flights", "Expert naturalist guide"],
         highlight: "Exclusive private vehicle access in premium traversing areas"
       },
@@ -145,7 +145,7 @@ export const destinations: Destination[] = [
         id: "cape-grand",
         name: "Cape Grand Tour",
         duration: "7 Days 6 Nights",
-        price: "$6,200",
+        price: "Pricing Available Upon Request",
         includes: ["Table Mountain cable car", "Private wine estate tours", "V&A Waterfront dining", "Cape Peninsula drive", "Luxury boutique hotel"],
         highlight: "Curated wine experiences at award-winning Franschhoek estates"
       },
@@ -153,7 +153,7 @@ export const destinations: Destination[] = [
         id: "ultimate-sa",
         name: "Ultimate South Africa",
         duration: "14 Days 13 Nights",
-        price: "$14,500",
+        price: "Pricing Available Upon Request",
         includes: ["Kruger Big Five safari", "Drakensberg hiking", "Cape Town luxury stay", "Soweto cultural immersion", "Private chartered transfers"],
         highlight: "The definitive South Africa experience crafted exclusively for you"
       }
@@ -176,7 +176,7 @@ export const destinations: Destination[] = [
     heroImage: "/na-hero.jpg",
     tagline: "Ancient dunes, celestial skies and silence beyond measure.",
     overview: "Namibia is a land of striking contrasts and boundless horizons. From the towering red dunes of Sossusvlei to the rugged Skeleton Coast, this untamed wilderness offers an ethereal journey into nature's most dramatic landscapes.",
-    hint: "From $7,200 · 8 Days",
+    hint: "Custom Safari Package",
     bestTimeToVisit: {
       months: "June to October",
       reason: "Dry winter with clear skies and game congregated at waterholes.",
@@ -229,7 +229,7 @@ export const destinations: Destination[] = [
         id: "desert-majesty",
         name: "Desert Majesty",
         duration: "8 Days 7 Nights",
-        price: "$7,200",
+        price: "Pricing Available Upon Request",
         includes: ["Private desert flights", "Luxury lodge stay", "Guided dune walks", "All meals"],
         highlight: "Exclusive stargazing experience in the Namib desert"
       },
@@ -237,7 +237,7 @@ export const destinations: Destination[] = [
         id: "namibia-explorer",
         name: "Namibia Explorer",
         duration: "12 Days 11 Nights",
-        price: "$10,500",
+        price: "Pricing Available Upon Request",
         includes: ["Skeleton Coast flight", "Etosha private safari", "Premium accommodations", "Expert guides"],
         highlight: "Scenic flight over the dramatic Skeleton Coast shipwrecks"
       }
@@ -258,7 +258,7 @@ export const destinations: Destination[] = [
     heroImage: "/bw-hero.jpg",
     tagline: "The Okavango Delta — Africa's last great Eden, untouched and infinite.",
     overview: "Botswana is the pinnacle of exclusive safari experiences. With its lush waterways, dense wildlife populations, and commitment to low-impact tourism, it offers an intimately wild encounter unlike any other.",
-    hint: "From $12,000 · 9 Days",
+    hint: "Bespoke Wilderness Journey",
     bestTimeToVisit: {
       months: "July to October",
       reason: "Peak dry season when wildlife concentrates around the shrinking water channels of the Delta.",
@@ -303,7 +303,7 @@ export const destinations: Destination[] = [
         id: "delta-dreams",
         name: "Delta Dreams",
         duration: "6 Days 5 Nights",
-        price: "$8,500",
+        price: "Pricing Available Upon Request",
         includes: ["Helicopter transfers", "Mokoro safaris", "Ultra-luxury tented camps", "All meals"],
         highlight: "Exclusive water-level wildlife viewing in private concessions"
       },
@@ -311,7 +311,7 @@ export const destinations: Destination[] = [
         id: "botswana-grand",
         name: "Botswana Grand",
         duration: "10 Days 9 Nights",
-        price: "$14,000",
+        price: "Pricing Available Upon Request",
         includes: ["Chobe river safari", "Moremi game drives", "Private guides", "Premium beverages"],
         highlight: "Unmatched elephant encounters on the Chobe River"
       }
@@ -332,7 +332,7 @@ export const destinations: Destination[] = [
     heroImage: "/mw-hero.jpg",
     tagline: "Warm lakeshore sanctuaries where time dissolves into paradise.",
     overview: "Known as the 'Warm Heart of Africa', Malawi offers tranquil escapes along its massive freshwater lake, complemented by lush highlands and emerging wildlife reserves.",
-    hint: "From $6,500 · 7 Days",
+    hint: "Affordable Luxury Package",
     bestTimeToVisit: {
       months: "May to October",
       reason: "Cooler, dry weather ideal for both lake activities and game viewing.",
@@ -377,7 +377,7 @@ export const destinations: Destination[] = [
         id: "lake-and-bush",
         name: "Lake & Bush Retreat",
         duration: "7 Days 6 Nights",
-        price: "$6,500",
+        price: "Pricing Available Upon Request",
         includes: ["Private lake villa", "Liwonde boat safaris", "All meals", "Chartered flights"],
         highlight: "Seamless transition from thrilling safari to lakeside relaxation"
       },
@@ -385,7 +385,7 @@ export const destinations: Destination[] = [
         id: "malawi-highlands",
         name: "Highlands & Waters",
         duration: "9 Days 8 Nights",
-        price: "$8,200",
+        price: "Pricing Available Upon Request",
         includes: ["Zomba plateau hiking", "Lake snorkeling", "Premium lodges", "Private guide"],
         highlight: "Exclusive dinner under the stars on the shores of Lake Malawi"
       }

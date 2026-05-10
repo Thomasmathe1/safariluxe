@@ -59,20 +59,11 @@ export function About() {
             </div>
 
             <div
-              className="mt-12 pt-12"
+              className="mt-12 pt-12 flex items-center gap-4"
               style={{ borderTop: "1px solid hsl(158 22% 18%)" }}
             >
-              <img
-                src="/experience-new.jpg"
-                alt="Founder portrait"
-                className="h-16 w-16 object-cover rounded-full mb-4"
-                style={{
-                  filter: "grayscale(30%) contrast(1.1)",
-                  boxShadow: "0 0 0 2px hsl(46 65% 52% / 0.3), 0 4px 16px hsl(0 0% 0% / 0.5)"
-                }}
-              />
-              <p className="font-serif italic text-primary text-lg">Alexander Vance</p>
-              <p className="text-xs uppercase tracking-[0.2em] text-foreground/45 mt-1">Founder & Head Guide</p>
+              <div className="gold-divider" />
+              <p className="text-xs uppercase tracking-[0.25em] text-foreground/45 font-medium">Est. in the Heart of Africa</p>
             </div>
           </motion.div>
 
