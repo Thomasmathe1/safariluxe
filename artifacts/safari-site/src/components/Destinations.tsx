@@ -8,7 +8,7 @@ const destinations = [
     tagline: "Where the Big Five roam the world's most celebrated wilderness.",
     hint: "Tailored Luxury Experience",
     image: "/sa-new.jpg",
-    flag: "🇿🇦"
+    flag: "🇿🇦",
   },
   {
     id: "namibia",
@@ -16,7 +16,7 @@ const destinations = [
     tagline: "Ancient dunes, celestial skies and silence beyond measure.",
     hint: "Custom Safari Package",
     image: "/na-new.jpg",
-    flag: "🇳🇦"
+    flag: "🇳🇦",
   },
   {
     id: "botswana",
@@ -24,7 +24,7 @@ const destinations = [
     tagline: "The Okavango Delta — Africa's last great Eden, untouched and infinite.",
     hint: "Bespoke Wilderness Journey",
     image: "/bw-new.jpg",
-    flag: "🇧🇼"
+    flag: "🇧🇼",
   },
   {
     id: "malawi",
@@ -32,9 +32,25 @@ const destinations = [
     tagline: "Warm lakeshore sanctuaries where time dissolves into paradise.",
     hint: "Affordable Luxury Package",
     image: "/mw-new.jpg",
-    flag: "🇲🇼"
-  }
+    flag: "🇲🇼",
+  },
 ];
+
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.14 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] },
+  },
+};
 
 export function Destinations() {
   const [, setLocation] = useLocation();
@@ -47,99 +63,128 @@ export function Destinations() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="gold-divider mx-auto mb-8" />
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Iconic Destinations</h2>
-            <p className="text-foreground/60 font-light leading-relaxed">
-              Journeys crafted with meticulous attention to detail, balancing raw wilderness with uncompromising luxury.
+            <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
+              Iconic Destinations
+            </h2>
+            <p className="text-foreground/58 font-light leading-relaxed">
+              Journeys crafted with meticulous attention to detail, balancing raw wilderness
+              with uncompromising luxury.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {destinations.map((dest, index) => (
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+        >
+          {destinations.map((dest) => (
             <motion.div
               key={dest.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
+              variants={cardVariants}
               className="group relative aspect-[4/5] overflow-hidden cursor-pointer"
               data-testid={`destination-link-${dest.id}`}
               onClick={() => setLocation(`/destinations/${dest.id}`)}
               style={{
-                boxShadow: "0 8px 40px hsl(0 0% 0% / 0.5)"
+                boxShadow: "0 12px 48px hsl(0 0% 0% / 0.55)",
               }}
+              whileHover={{ boxShadow: "0 0 0 1.5px hsl(46 65% 52% / 0.6), 0 20px 60px hsl(0 0% 0% / 0.65)" }}
+              transition={{ duration: 0.4 }}
             >
-              <img
+              <motion.img
                 src={dest.image}
                 alt={dest.name}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-108"
+                className="absolute inset-0 w-full h-full object-cover"
                 style={{ transformOrigin: "center center" }}
+                whileHover={{ scale: 1.08 }}
+                transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-black/20 transition-opacity duration-500" />
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/28 to-black/18 transition-opacity duration-500" />
+
+              <motion.div
+                className="absolute inset-0"
                 style={{
-                  background: "linear-gradient(to top, hsl(158 42% 5% / 0.97) 0%, hsl(0 0% 0% / 0.25) 50%, transparent 100%)"
+                  background:
+                    "linear-gradient(to top, hsl(158 42% 5% / 0.97) 0%, hsl(0 0% 0% / 0.22) 50%, transparent 100%)",
                 }}
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.6 }}
               />
 
               <div
                 className="absolute top-5 left-5 px-3 py-1 text-sm z-30 rounded-full"
                 style={{
-                  background: "hsl(0 0% 0% / 0.55)",
-                  backdropFilter: "blur(12px)",
-                  border: "1px solid hsl(46 65% 52% / 0.2)",
+                  background: "hsl(0 0% 0% / 0.52)",
+                  backdropFilter: "blur(14px)",
+                  border: "1px solid hsl(46 65% 52% / 0.22)",
                 }}
               >
                 {dest.flag}
               </div>
 
-              <div
-                className="absolute inset-3 border opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 pointer-events-none"
-                style={{ borderColor: "hsl(46 65% 52% / 0.45)" }}
+              <motion.div
+                className="absolute inset-3 border z-20 pointer-events-none"
+                style={{ borderColor: "hsl(46 65% 52% / 0.55)" }}
+                initial={{ opacity: 0, scale: 0.97 }}
+                whileHover={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.45, ease: "easeOut" }}
               />
-              <div
-                className="absolute inset-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none"
-                style={{
-                  boxShadow: "inset 0 0 40px hsl(46 65% 52% / 0.06)"
-                }}
+              <motion.div
+                className="absolute inset-3 z-20 pointer-events-none"
+                style={{ boxShadow: "inset 0 0 50px hsl(46 65% 52% / 0.07)" }}
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
               />
 
-              <div className="absolute inset-0 p-8 flex flex-col justify-end z-30">
-                <p className="text-primary uppercase tracking-[0.2em] text-xs mb-3 font-semibold">
+              <div className="absolute inset-0 p-7 md:p-9 flex flex-col justify-end z-30">
+                <p className="text-primary uppercase tracking-[0.22em] text-[11px] mb-3 font-semibold">
                   {dest.hint}
                 </p>
-                <h3 className="text-3xl md:text-4xl font-serif text-foreground mb-2 transition-transform duration-300 group-hover:-translate-y-1">
+                <motion.h3
+                  className="text-3xl md:text-4xl font-serif text-foreground mb-2 leading-tight"
+                  whileHover={{ x: 4 }}
+                  transition={{ duration: 0.3 }}
+                >
                   {dest.name}
-                </h3>
-                <p className="text-foreground/70 font-light mb-8 text-sm leading-relaxed">
+                </motion.h3>
+                <p className="text-foreground/68 font-light mb-8 text-sm leading-relaxed max-w-xs">
                   {dest.tagline}
                 </p>
 
-                <div className="overflow-hidden">
+                <motion.div
+                  className="overflow-hidden"
+                  initial={{ height: 0, opacity: 0 }}
+                  whileHover={{ height: "auto", opacity: 1 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                >
                   <button
-                    className="w-full py-4 text-xs font-semibold uppercase tracking-[0.2em] transition-all duration-400 translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                    className="w-full py-4 text-xs font-semibold uppercase tracking-[0.22em] transition-all duration-300"
                     style={{
-                      background: "hsl(158 42% 10% / 0.35)",
-                      backdropFilter: "blur(14px)",
-                      WebkitBackdropFilter: "blur(14px)",
-                      border: "1px solid hsl(46 65% 52% / 0.55)",
+                      background: "hsl(158 42% 10% / 0.38)",
+                      backdropFilter: "blur(16px)",
+                      WebkitBackdropFilter: "blur(16px)",
+                      border: "1px solid hsl(46 65% 52% / 0.58)",
                       color: "hsl(46 65% 52%)",
-                      boxShadow: "0 4px 20px hsl(0 0% 0% / 0.3), inset 0 1px 0 hsl(46 65% 52% / 0.1)"
+                      boxShadow:
+                        "0 4px 22px hsl(0 0% 0% / 0.35), inset 0 1px 0 hsl(46 65% 52% / 0.12)",
                     }}
                     data-testid={`book-now-${dest.id}`}
                   >
-                    Discover More
+                    Discover More →
                   </button>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
