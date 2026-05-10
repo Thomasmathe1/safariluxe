@@ -6,7 +6,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img
-          src="/hero.jpg"
+          src="/hero-new.jpg"
           alt="African Safari at sunset"
           className="w-full h-full object-cover"
         />
@@ -16,57 +16,64 @@ export function Hero() {
 
       <div className="relative z-10 container mx-auto px-6 text-center flex flex-col items-center">
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.5 }}
           className="text-primary uppercase tracking-[0.3em] text-sm md:text-base mb-6"
         >
-          Unrivaled African Journeys
+          EXTRAORDINARY AFRICAN JOURNEYS
         </motion.p>
         
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1.2, delay: 0.7 }}
           className="text-5xl md:text-7xl lg:text-8xl font-serif text-foreground leading-tight mb-8"
         >
-          Discover the <br className="hidden md:block" />
-          <span className="italic text-primary">Untamed</span>
+          Discover Africa <br className="hidden md:block" />
+          <span className="italic text-primary">In Style, Naturally</span>
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, delay: 1 }}
           className="text-foreground/80 max-w-2xl text-lg md:text-xl font-light mb-12"
         >
-          Curated, exclusive experiences deep in the heart of Africa's most iconic wilderness.
+          Bespoke wilderness journeys crafted for the discerning few. Pure Africa, uncompromised luxury.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, delay: 1.2 }}
           className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
         >
           <a
             href="#destinations"
             className="px-10 py-4 bg-primary text-primary-foreground uppercase tracking-widest text-sm font-medium hover:bg-primary/90 transition-colors"
+            data-testid="hero-explore-btn"
           >
             Explore Destinations
           </a>
           <a
             href="#contact"
             className="px-10 py-4 border border-primary text-primary uppercase tracking-widest text-sm font-medium bg-background/20 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            data-testid="hero-book-btn"
           >
-            Book Now
+            Book Your Safari
           </a>
         </motion.div>
       </div>
 
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
         transition={{ delay: 2, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center"
       >

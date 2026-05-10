@@ -40,13 +40,13 @@ export function About() {
                 We believe true luxury is access. Access to untouched landscapes, access to intimate wildlife encounters, and access to a level of service that anticipates needs before they arise.
               </p>
               <p>
-                Aurum Safaris does not offer pre-packaged tours. We are an atelier of travel, designing profound journeys for those who seek the extraordinary.
+                SAFARILUXE does not offer pre-packaged tours. We are an atelier of travel, designing profound journeys for those who seek the extraordinary.
               </p>
             </div>
             
             <div className="mt-12 pt-12 border-t border-border">
               <img 
-                src="/experience.jpg" 
+                src="/experience-new.jpg" 
                 alt="Signature of founder" 
                 className="h-16 w-16 object-cover rounded-full grayscale mb-4"
               />
@@ -61,13 +61,13 @@ export function About() {
               return (
                 <motion.div
                   key={pillar.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
-                  className="flex gap-6 items-start"
+                  className="flex gap-6 items-start group"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:text-orange-accent group-hover:border-orange-accent transition-colors duration-300">
                     <Icon size={20} />
                   </div>
                   <div>

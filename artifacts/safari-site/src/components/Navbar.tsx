@@ -45,8 +45,8 @@ export function Navbar() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Link href="/">
-            <span className="font-serif text-2xl font-medium tracking-wider text-primary cursor-pointer">
-              AURUM SAFARIS
+            <span className="font-serif text-2xl font-bold tracking-wider text-primary cursor-pointer">
+              SAFARILUXE
             </span>
           </Link>
 

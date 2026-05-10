@@ -4,30 +4,34 @@ const destinations = [
   {
     id: "south-africa",
     name: "South Africa",
-    tagline: "The Greater Kruger & The Cape",
-    hint: "From $8,500 / 10 Days",
-    image: "/south-africa.jpg"
+    tagline: "Where the Big Five roam the world's most celebrated wilderness.",
+    hint: "From $8,500 · 10 Days",
+    image: "/sa-new.jpg",
+    flag: "🇿🇦"
   },
   {
     id: "namibia",
     name: "Namibia",
-    tagline: "Sossusvlei Dunes & Skeleton Coast",
-    hint: "From $7,200 / 8 Days",
-    image: "/namibia.jpg"
+    tagline: "Ancient dunes, celestial skies and silence beyond measure.",
+    hint: "From $7,200 · 8 Days",
+    image: "/na-new.jpg",
+    flag: "🇳🇦"
   },
   {
     id: "botswana",
     name: "Botswana",
-    tagline: "The Okavango Delta",
-    hint: "From $12,000 / 9 Days",
-    image: "/botswana.jpg"
+    tagline: "The Okavango Delta — Africa's last great Eden, untouched and infinite.",
+    hint: "From $12,000 · 9 Days",
+    image: "/bw-new.jpg",
+    flag: "🇧🇼"
   },
   {
     id: "malawi",
     name: "Malawi",
-    tagline: "Lake Malawi & Liwonde",
-    hint: "From $6,500 / 7 Days",
-    image: "/malawi.jpg"
+    tagline: "Warm lakeshore sanctuaries where time dissolves into paradise.",
+    hint: "From $6,500 · 7 Days",
+    image: "/mw-new.jpg",
+    flag: "🇲🇼"
   }
 ];
 
@@ -37,7 +41,7 @@ export function Destinations() {
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -54,11 +58,12 @@ export function Destinations() {
           {destinations.map((dest, index) => (
             <motion.div
               key={dest.id}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group relative aspect-[4/5] overflow-hidden cursor-pointer bg-card"
+              data-testid={`destination-card-${dest.id}`}
             >
               <img
                 src={dest.image}
@@ -67,8 +72,12 @@ export function Destinations() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent transition-opacity duration-500" />
               
+              <div className="absolute top-6 left-6 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full text-lg z-30">
+                {dest.flag}
+              </div>
+
               {/* Border that appears on hover */}
-              <div className="absolute inset-4 border border-primary/0 group-hover:border-primary/50 transition-colors duration-500 z-20 pointer-events-none" />
+              <div className="absolute inset-4 border border-primary/0 group-hover:border-primary transition-colors duration-500 z-20 pointer-events-none" />
 
               <div className="absolute inset-0 p-8 flex flex-col justify-end z-30">
                 <p className="text-primary uppercase tracking-widest text-xs mb-2 font-medium">
@@ -84,6 +93,7 @@ export function Destinations() {
                 <div className="overflow-hidden">
                   <motion.button
                     className="w-full py-4 border border-primary/50 bg-background/20 backdrop-blur-md text-primary uppercase tracking-widest text-xs font-medium group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                    data-testid={`book-now-${dest.id}`}
                   >
                     Book Now
                   </motion.button>

@@ -51,74 +51,74 @@
 }
 
 :root {
-  /* Matte Black / Gold Theme */
-  --background: 0 0% 4%; /* #0a0a0a */
-  --foreground: 38 33% 94%; /* #F5F0E8 */
-  --border: 44 54% 20%; /* Darker gold for subtle borders */
+  /* SAFARILUXE Theme */
+  --background: 150 20% 5%;
+  --foreground: 40 30% 92%;
+  --border: 42 40% 22%;
   
-  --card: 0 0% 6%;
-  --card-foreground: 38 33% 94%;
-  --card-border: 44 54% 20%;
+  --card: 150 15% 8%;
+  --card-foreground: 40 30% 92%;
+  --card-border: 42 40% 22%;
   
-  --popover: 0 0% 6%;
-  --popover-foreground: 38 33% 94%;
-  --popover-border: 44 54% 20%;
+  --popover: 150 15% 8%;
+  --popover-foreground: 40 30% 92%;
+  --popover-border: 42 40% 22%;
   
-  --primary: 44 54% 54%; /* Gold #C9A84C */
-  --primary-foreground: 0 0% 4%;
+  --primary: 42 78% 52%;
+  --primary-foreground: 150 20% 5%;
   
-  --secondary: 0 0% 12%;
-  --secondary-foreground: 38 33% 94%;
+  --secondary: 150 10% 12%;
+  --secondary-foreground: 40 30% 92%;
   
-  --muted: 0 0% 12%;
-  --muted-foreground: 38 33% 70%;
+  --muted: 150 10% 12%;
+  --muted-foreground: 40 15% 65%;
   
-  --accent: 44 54% 54%;
-  --accent-foreground: 0 0% 4%;
+  --accent: 42 78% 52%;
+  --accent-foreground: 150 20% 5%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
   
-  --input: 44 54% 20%;
-  --ring: 44 54% 54%;
+  --input: 42 40% 22%;
+  --ring: 42 78% 52%;
 
   --app-font-sans: 'Plus Jakarta Sans', sans-serif;
   --app-font-serif: 'Playfair Display', serif;
   --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   
-  --radius: 0rem;
+  --radius: 0.25rem;
 }
 
 .dark {
-  --background: 0 0% 4%;
-  --foreground: 38 33% 94%;
-  --border: 44 54% 20%;
+  --background: 150 20% 5%;
+  --foreground: 40 30% 92%;
+  --border: 42 40% 22%;
   
-  --card: 0 0% 6%;
-  --card-foreground: 38 33% 94%;
-  --card-border: 44 54% 20%;
+  --card: 150 15% 8%;
+  --card-foreground: 40 30% 92%;
+  --card-border: 42 40% 22%;
   
-  --popover: 0 0% 6%;
-  --popover-foreground: 38 33% 94%;
-  --popover-border: 44 54% 20%;
+  --popover: 150 15% 8%;
+  --popover-foreground: 40 30% 92%;
+  --popover-border: 42 40% 22%;
   
-  --primary: 44 54% 54%;
-  --primary-foreground: 0 0% 4%;
+  --primary: 42 78% 52%;
+  --primary-foreground: 150 20% 5%;
   
-  --secondary: 0 0% 12%;
-  --secondary-foreground: 38 33% 94%;
+  --secondary: 150 10% 12%;
+  --secondary-foreground: 40 30% 92%;
   
-  --muted: 0 0% 12%;
-  --muted-foreground: 38 33% 70%;
+  --muted: 150 10% 12%;
+  --muted-foreground: 40 15% 65%;
   
-  --accent: 44 54% 54%;
-  --accent-foreground: 0 0% 4%;
+  --accent: 42 78% 52%;
+  --accent-foreground: 150 20% 5%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
   
-  --input: 44 54% 20%;
-  --ring: 44 54% 54%;
+  --input: 42 40% 22%;
+  --ring: 42 78% 52%;
 }
 
 @layer base {
@@ -135,3 +135,7 @@
     @apply font-serif font-normal;
   }
 }
+
+.text-orange-accent { color: hsl(22 85% 55%); }
+.bg-orange-accent { background-color: hsl(22 85% 55%); }
+.border-orange-accent { border-color: hsl(22 85% 55%); }

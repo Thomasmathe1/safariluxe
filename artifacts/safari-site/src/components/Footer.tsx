@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="md:col-span-2">
-            <h2 className="font-serif text-3xl text-primary mb-6">AURUM SAFARIS</h2>
+            <h2 className="font-serif text-3xl text-primary mb-6">SAFARILUXE</h2>
             <p className="text-foreground/70 font-light max-w-sm mb-8">
               Curating exceptional journeys through the continent's most pristine environments. Redefining wilderness luxury.
             </p>
@@ -30,13 +30,13 @@ export function Footer() {
             <h4 className="text-foreground font-medium uppercase tracking-widest text-sm mb-6">Contact</h4>
             <ul className="space-y-4 text-foreground/70 font-light">
               <li>
-                <a href="mailto:concierge@aurumsafaris.com" className="hover:text-primary transition-colors">
-                  concierge@aurumsafaris.com
+                <a href="mailto:concierge@safariluxe.com" className="hover:text-primary transition-colors">
+                  concierge@safariluxe.com
                 </a>
               </li>
               <li>
-                <a href="tel:+18005551234" className="hover:text-primary transition-colors">
-                  +1 (800) 555-1234
+                <a href="tel:+27115550199" className="hover:text-primary transition-colors">
+                  +27 11 555 0199
                 </a>
               </li>
               <li className="pt-4">
@@ -58,7 +58,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light text-foreground/50">
-          <p>&copy; {new Date().getFullYear()} Aurum Safaris. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} SAFARILUXE. All rights reserved.</p>
           <p>Designed for the Extraordinary</p>
         </div>
       </div>

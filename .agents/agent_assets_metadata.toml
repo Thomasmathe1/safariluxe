@@ -36,3 +36,39 @@ id = "WuVW5rRLKJpBTPOFfMPro"
 uri = "file://artifacts/safari-site/public/experience.jpg"
 type = "image"
 title = "cinematic african safari dramatic lion"
+
+[[outputs]]
+id = "hqeUfGYX-_BwriTy5BRCd"
+uri = "file://artifacts/safari-site/public/hero-new.jpg"
+type = "image"
+title = "safari jeep sunset golden hour Africa"
+
+[[outputs]]
+id = "9hKNMhpQkuu0OyeUGjU7m"
+uri = "file://artifacts/safari-site/public/sa-new.jpg"
+type = "image"
+title = "Kruger National Park safari Big Five"
+
+[[outputs]]
+id = "9TvSL5-MQJieaK4IMhSJj"
+uri = "file://artifacts/safari-site/public/na-new.jpg"
+type = "image"
+title = "Sossusvlei red dunes Namibia"
+
+[[outputs]]
+id = "Tjdt1Ue3Ih_e97ffFcTtu"
+uri = "file://artifacts/safari-site/public/bw-new.jpg"
+type = "image"
+title = "Okavango Delta elephant sunset"
+
+[[outputs]]
+id = "WQiqjIJLttDQAOqLvsWCr"
+uri = "file://artifacts/safari-site/public/mw-new.jpg"
+type = "image"
+title = "Lake Malawi crystal water"
+
+[[outputs]]
+id = "7w5qFCkNgUebQlHfGW83C"
+uri = "file://artifacts/safari-site/public/experience-new.jpg"
+type = "image"
+title = "African sunset silhouette acacia tree cinematic"
