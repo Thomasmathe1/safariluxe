@@ -49,58 +49,92 @@ export function Destinations() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="w-12 h-[1px] bg-primary mx-auto mb-8" />
+            <div className="gold-divider mx-auto mb-8" />
             <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">Iconic Destinations</h2>
-            <p className="text-foreground/70 font-light">
+            <p className="text-foreground/60 font-light leading-relaxed">
               Journeys crafted with meticulous attention to detail, balancing raw wilderness with uncompromising luxury.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {destinations.map((dest, index) => (
             <motion.div
               key={dest.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="group relative aspect-[4/5] overflow-hidden cursor-pointer bg-card"
+              transition={{ duration: 0.8, delay: index * 0.15 }}
+              className="group relative aspect-[4/5] overflow-hidden cursor-pointer"
               data-testid={`destination-link-${dest.id}`}
               onClick={() => setLocation(`/destinations/${dest.id}`)}
+              style={{
+                boxShadow: "0 8px 40px hsl(0 0% 0% / 0.5)"
+              }}
             >
               <img
                 src={dest.image}
                 alt={dest.name}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-108"
+                style={{ transformOrigin: "center center" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent transition-opacity duration-500" />
-              
-              <div className="absolute top-6 left-6 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full text-lg z-30">
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-black/20 transition-opacity duration-500" />
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                style={{
+                  background: "linear-gradient(to top, hsl(158 42% 5% / 0.97) 0%, hsl(0 0% 0% / 0.25) 50%, transparent 100%)"
+                }}
+              />
+
+              <div
+                className="absolute top-5 left-5 px-3 py-1 text-sm z-30 rounded-full"
+                style={{
+                  background: "hsl(0 0% 0% / 0.55)",
+                  backdropFilter: "blur(12px)",
+                  border: "1px solid hsl(46 65% 52% / 0.2)",
+                }}
+              >
                 {dest.flag}
               </div>
 
-              {/* Border that appears on hover */}
-              <div className="absolute inset-4 border border-primary/0 group-hover:border-primary transition-colors duration-500 z-20 pointer-events-none" />
+              <div
+                className="absolute inset-3 border opacity-0 group-hover:opacity-100 transition-all duration-500 z-20 pointer-events-none"
+                style={{ borderColor: "hsl(46 65% 52% / 0.45)" }}
+              />
+              <div
+                className="absolute inset-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none"
+                style={{
+                  boxShadow: "inset 0 0 40px hsl(46 65% 52% / 0.06)"
+                }}
+              />
 
               <div className="absolute inset-0 p-8 flex flex-col justify-end z-30">
-                <p className="text-primary uppercase tracking-widest text-xs mb-2 font-medium">
+                <p className="text-primary uppercase tracking-[0.2em] text-xs mb-3 font-semibold">
                   {dest.hint}
                 </p>
-                <h3 className="text-3xl font-serif text-foreground mb-2">
+                <h3 className="text-3xl md:text-4xl font-serif text-foreground mb-2 transition-transform duration-300 group-hover:-translate-y-1">
                   {dest.name}
                 </h3>
-                <p className="text-foreground/80 font-light mb-8">
+                <p className="text-foreground/70 font-light mb-8 text-sm leading-relaxed">
                   {dest.tagline}
                 </p>
-                
+
                 <div className="overflow-hidden">
-                  <motion.button
-                    className="w-full py-4 border border-primary/50 bg-background/20 backdrop-blur-md text-primary uppercase tracking-widest text-xs font-medium group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                  <button
+                    className="w-full py-4 text-xs font-semibold uppercase tracking-[0.2em] transition-all duration-400 translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+                    style={{
+                      background: "hsl(158 42% 10% / 0.35)",
+                      backdropFilter: "blur(14px)",
+                      WebkitBackdropFilter: "blur(14px)",
+                      border: "1px solid hsl(46 65% 52% / 0.55)",
+                      color: "hsl(46 65% 52%)",
+                      boxShadow: "0 4px 20px hsl(0 0% 0% / 0.3), inset 0 1px 0 hsl(46 65% 52% / 0.1)"
+                    }}
                     data-testid={`book-now-${dest.id}`}
                   >
                     Discover More
-                  </motion.button>
+                  </button>
                 </div>
               </div>
             </motion.div>

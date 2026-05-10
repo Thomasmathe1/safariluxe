@@ -51,91 +51,239 @@
 }
 
 :root {
-  /* SAFARILUXE Theme */
-  --background: 150 20% 5%;
-  --foreground: 40 30% 92%;
-  --border: 42 40% 22%;
-  
-  --card: 150 15% 8%;
-  --card-foreground: 40 30% 92%;
-  --card-border: 42 40% 22%;
-  
-  --popover: 150 15% 8%;
-  --popover-foreground: 40 30% 92%;
-  --popover-border: 42 40% 22%;
-  
-  --primary: 42 78% 52%;
-  --primary-foreground: 150 20% 5%;
-  
-  --secondary: 150 10% 12%;
-  --secondary-foreground: 40 30% 92%;
-  
-  --muted: 150 10% 12%;
-  --muted-foreground: 40 15% 65%;
-  
-  --accent: 42 78% 52%;
-  --accent-foreground: 150 20% 5%;
-  
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 98%;
-  
-  --input: 42 40% 22%;
-  --ring: 42 78% 52%;
+  /* SAFARILUXE — Emerald & Champagne Palette */
+
+  /* Backgrounds: matte charcoal black as dominant surface */
+  --background: 0 0% 7%;          /* #121212 matte charcoal */
+  --foreground: 40 38% 95%;       /* #F8F5EE soft ivory */
+  --border: 158 22% 16%;          /* subtle emerald-tinted border */
+
+  /* Cards: deep emerald green surface for richness and contrast */
+  --card: 158 42% 10%;            /* #0F3D2E emerald-derived dark */
+  --card-foreground: 40 38% 95%;
+  --card-border: 158 22% 18%;
+
+  --popover: 158 42% 10%;
+  --popover-foreground: 40 38% 95%;
+  --popover-border: 158 22% 18%;
+
+  /* Primary: champagne gold */
+  --primary: 46 65% 52%;          /* #D4AF37 champagne gold */
+  --primary-foreground: 0 0% 7%;  /* charcoal on gold */
+
+  /* Secondary: medium emerald green */
+  --secondary: 158 32% 13%;       /* rich emerald panel */
+  --secondary-foreground: 40 38% 95%;
+
+  --muted: 158 20% 11%;
+  --muted-foreground: 40 18% 62%;
+
+  /* Accent: champagne gold (same as primary for consistency) */
+  --accent: 46 65% 52%;
+  --accent-foreground: 0 0% 7%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 40 38% 95%;
+
+  --input: 158 22% 16%;
+  --ring: 46 65% 52%;
 
   --app-font-sans: 'Plus Jakarta Sans', sans-serif;
   --app-font-serif: 'Playfair Display', serif;
   --app-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  
-  --radius: 0.25rem;
+
+  --radius: 0.375rem;
+
+  /* Named tokens for amber accent */
+  --amber: 28 58% 50%;            /* #C97B36 sunset amber */
 }
 
 .dark {
-  --background: 150 20% 5%;
-  --foreground: 40 30% 92%;
-  --border: 42 40% 22%;
-  
-  --card: 150 15% 8%;
-  --card-foreground: 40 30% 92%;
-  --card-border: 42 40% 22%;
-  
-  --popover: 150 15% 8%;
-  --popover-foreground: 40 30% 92%;
-  --popover-border: 42 40% 22%;
-  
-  --primary: 42 78% 52%;
-  --primary-foreground: 150 20% 5%;
-  
-  --secondary: 150 10% 12%;
-  --secondary-foreground: 40 30% 92%;
-  
-  --muted: 150 10% 12%;
-  --muted-foreground: 40 15% 65%;
-  
-  --accent: 42 78% 52%;
-  --accent-foreground: 150 20% 5%;
-  
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 98%;
-  
-  --input: 42 40% 22%;
-  --ring: 42 78% 52%;
+  --background: 0 0% 7%;
+  --foreground: 40 38% 95%;
+  --border: 158 22% 16%;
+
+  --card: 158 42% 10%;
+  --card-foreground: 40 38% 95%;
+  --card-border: 158 22% 18%;
+
+  --popover: 158 42% 10%;
+  --popover-foreground: 40 38% 95%;
+  --popover-border: 158 22% 18%;
+
+  --primary: 46 65% 52%;
+  --primary-foreground: 0 0% 7%;
+
+  --secondary: 158 32% 13%;
+  --secondary-foreground: 40 38% 95%;
+
+  --muted: 158 20% 11%;
+  --muted-foreground: 40 18% 62%;
+
+  --accent: 46 65% 52%;
+  --accent-foreground: 0 0% 7%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 40 38% 95%;
+
+  --input: 158 22% 16%;
+  --ring: 46 65% 52%;
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    scroll-behavior: smooth;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, hsl(158 42% 10% / 0.6) 0%, transparent 70%);
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-normal;
   }
+
+  ::selection {
+    background-color: hsl(46 65% 52% / 0.3);
+    color: hsl(40 38% 95%);
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(0 0% 7%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(46 65% 52% / 0.4);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(46 65% 52% / 0.7);
+  }
 }
 
-.text-orange-accent { color: hsl(22 85% 55%); }
-.bg-orange-accent { background-color: hsl(22 85% 55%); }
-.border-orange-accent { border-color: hsl(22 85% 55%); }
+/* ─── Amber / Sunset Accent Utilities ─────────────────────────── */
+.text-orange-accent  { color: hsl(var(--amber)); }
+.bg-orange-accent    { background-color: hsl(var(--amber)); }
+.border-orange-accent { border-color: hsl(var(--amber)); }
+
+/* ─── Luxury Glassmorphism ─────────────────────────────────────── */
+.luxury-glass {
+  background: linear-gradient(
+    135deg,
+    hsl(158 42% 10% / 0.55) 0%,
+    hsl(0 0% 7% / 0.45) 100%
+  );
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid hsl(46 65% 52% / 0.18);
+  box-shadow: 0 8px 32px hsl(0 0% 0% / 0.45), inset 0 1px 0 hsl(46 65% 52% / 0.08);
+}
+
+/* ─── Gold Glow Shadow ─────────────────────────────────────────── */
+.gold-glow {
+  box-shadow:
+    0 0 0 1px hsl(46 65% 52% / 0.25),
+    0 4px 24px hsl(46 65% 52% / 0.15),
+    0 1px 4px hsl(0 0% 0% / 0.6);
+}
+
+.gold-glow-hover {
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.gold-glow-hover:hover {
+  box-shadow:
+    0 0 0 1px hsl(46 65% 52% / 0.45),
+    0 8px 40px hsl(46 65% 52% / 0.2),
+    0 2px 8px hsl(0 0% 0% / 0.5);
+  transform: translateY(-2px);
+}
+
+/* ─── Premium Button Base ──────────────────────────────────────── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, hsl(46 65% 56%) 0%, hsl(46 65% 44%) 100%);
+  color: hsl(0 0% 7%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow:
+    0 4px 20px hsl(46 65% 52% / 0.35),
+    inset 0 1px 0 hsl(46 65% 70% / 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.btn-gold:hover {
+  background: linear-gradient(135deg, hsl(46 65% 60%) 0%, hsl(46 65% 50%) 100%);
+  box-shadow:
+    0 6px 28px hsl(46 65% 52% / 0.5),
+    inset 0 1px 0 hsl(46 65% 70% / 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: hsl(158 42% 10% / 0.3);
+  color: hsl(46 65% 52%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid hsl(46 65% 52% / 0.5);
+  border-radius: var(--radius);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 hsl(46 65% 52% / 0.08), 0 4px 16px hsl(0 0% 0% / 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.btn-glass:hover {
+  background: hsl(46 65% 52%);
+  color: hsl(0 0% 7%);
+  border-color: hsl(46 65% 52%);
+  box-shadow: 0 6px 28px hsl(46 65% 52% / 0.4);
+  transform: translateY(-1px);
+}
+
+/* ─── Emerald Card Surface ─────────────────────────────────────── */
+.emerald-card {
+  background: linear-gradient(
+    160deg,
+    hsl(158 42% 11%) 0%,
+    hsl(158 30% 8%) 100%
+  );
+  border: 1px solid hsl(158 22% 18%);
+  box-shadow: 0 4px 24px hsl(0 0% 0% / 0.4);
+}
+
+/* ─── Section Divider Gold Line ────────────────────────────────── */
+.gold-divider {
+  width: 3rem;
+  height: 1px;
+  background: linear-gradient(90deg, hsl(46 65% 52%), hsl(46 65% 52% / 0));
+}
+
+/* ─── Scrollbar hide utility ───────────────────────────────────── */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

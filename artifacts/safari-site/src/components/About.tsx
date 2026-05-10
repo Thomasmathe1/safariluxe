@@ -21,21 +21,35 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-32 bg-secondary border-y border-border">
-      <div className="container mx-auto px-6">
+    <section
+      id="about"
+      className="py-32 relative"
+      style={{
+        background: "linear-gradient(180deg, hsl(158 32% 13%) 0%, hsl(158 28% 11%) 100%)",
+        borderTop: "1px solid hsl(158 22% 18%)",
+        borderBottom: "1px solid hsl(158 22% 18%)",
+      }}
+    >
+      <div
+        className="absolute inset-0 opacity-25 pointer-events-none"
+        style={{
+          backgroundImage: "radial-gradient(ellipse 50% 60% at 80% 50%, hsl(46 65% 52% / 0.06) 0%, transparent 70%)"
+        }}
+      />
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
             className="lg:w-1/2 flex flex-col justify-center"
           >
-            <div className="w-12 h-[1px] bg-primary mb-8" />
+            <div className="gold-divider mb-8" />
             <h2 className="text-4xl md:text-5xl font-serif text-foreground leading-tight mb-8">
               A New Standard <br /> of Exploration
             </h2>
-            <div className="space-y-6 text-foreground/80 font-light text-lg">
+            <div className="space-y-6 text-foreground/70 font-light text-lg leading-relaxed">
               <p>
                 We believe true luxury is access. Access to untouched landscapes, access to intimate wildlife encounters, and access to a level of service that anticipates needs before they arise.
               </p>
@@ -43,19 +57,26 @@ export function About() {
                 SAFARILUXE does not offer pre-packaged tours. We are an atelier of travel, designing profound journeys for those who seek the extraordinary.
               </p>
             </div>
-            
-            <div className="mt-12 pt-12 border-t border-border">
-              <img 
-                src="/experience-new.jpg" 
-                alt="Signature of founder" 
-                className="h-16 w-16 object-cover rounded-full grayscale mb-4"
+
+            <div
+              className="mt-12 pt-12"
+              style={{ borderTop: "1px solid hsl(158 22% 18%)" }}
+            >
+              <img
+                src="/experience-new.jpg"
+                alt="Founder portrait"
+                className="h-16 w-16 object-cover rounded-full mb-4"
+                style={{
+                  filter: "grayscale(30%) contrast(1.1)",
+                  boxShadow: "0 0 0 2px hsl(46 65% 52% / 0.3), 0 4px 16px hsl(0 0% 0% / 0.5)"
+                }}
               />
               <p className="font-serif italic text-primary text-lg">Alexander Vance</p>
-              <p className="text-xs uppercase tracking-widest text-foreground/50">Founder & Head Guide</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-foreground/45 mt-1">Founder & Head Guide</p>
             </div>
           </motion.div>
 
-          <div className="lg:w-1/2 grid gap-10">
+          <div className="lg:w-1/2 grid gap-8">
             {pillars.map((pillar, index) => {
               const Icon = pillar.icon;
               return (
@@ -64,15 +85,37 @@ export function About() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.2 }}
-                  className="flex gap-6 items-start group"
+                  transition={{ duration: 0.6, delay: 0.2 + index * 0.18 }}
+                  className="flex gap-6 items-start group p-6 rounded-sm transition-all duration-400"
+                  style={{
+                    background: "hsl(158 42% 10% / 0)",
+                    border: "1px solid transparent",
+                    transition: "all 0.4s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    (e.currentTarget as HTMLElement).style.background = "hsl(158 42% 10% / 0.6)";
+                    (e.currentTarget as HTMLElement).style.borderColor = "hsl(46 65% 52% / 0.15)";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 24px hsl(0 0% 0% / 0.3)";
+                  }}
+                  onMouseLeave={(e) => {
+                    (e.currentTarget as HTMLElement).style.background = "hsl(158 42% 10% / 0)";
+                    (e.currentTarget as HTMLElement).style.borderColor = "transparent";
+                    (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                  }}
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:text-orange-accent group-hover:border-orange-accent transition-colors duration-300">
+                  <div
+                    className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-primary transition-all duration-400 group-hover:text-orange-accent"
+                    style={{
+                      border: "1px solid hsl(46 65% 52% / 0.3)",
+                      background: "hsl(46 65% 52% / 0.06)",
+                      boxShadow: "0 0 20px hsl(46 65% 52% / 0.1)"
+                    }}
+                  >
                     <Icon size={20} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-serif text-foreground mb-3">{pillar.title}</h3>
-                    <p className="text-foreground/70 font-light leading-relaxed">
+                    <h3 className="text-xl font-serif text-foreground mb-3 group-hover:text-primary transition-colors duration-300">{pillar.title}</h3>
+                    <p className="text-foreground/60 font-light leading-relaxed">
                       {pillar.description}
                     </p>
                   </div>
