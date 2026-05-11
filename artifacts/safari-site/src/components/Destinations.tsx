@@ -21,7 +21,8 @@ const destinations = [
   {
     id: "botswana",
     name: "Botswana",
-    tagline: "The Okavango Delta — Africa's last great Eden, untouched and infinite.",
+    tagline:
+      "The Okavango Delta — Africa's last great Eden, untouched and infinite.",
     hint: "Bespoke Wilderness Journey",
     image: "/bw-new.jpg",
     flag: "🇧🇼",
@@ -48,7 +49,7 @@ const cardVariants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.85, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.85, ease: "linear" as const },
   },
 };
 
@@ -63,15 +64,15 @@ export function Destinations() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.9, ease: "linear" as const }}
           >
             <div className="gold-divider mx-auto mb-8" />
             <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
               Iconic Destinations
             </h2>
             <p className="text-foreground/58 font-light leading-relaxed">
-              Journeys crafted with meticulous attention to detail, balancing raw wilderness
-              with uncompromising luxury.
+              Journeys crafted with meticulous attention to detail, balancing
+              raw wilderness with uncompromising luxury.
             </p>
           </motion.div>
         </div>
@@ -93,7 +94,10 @@ export function Destinations() {
               style={{
                 boxShadow: "0 12px 48px hsl(0 0% 0% / 0.55)",
               }}
-              whileHover={{ boxShadow: "0 0 0 1.5px hsl(46 65% 52% / 0.6), 0 20px 60px hsl(0 0% 0% / 0.65)" }}
+              whileHover={{
+                boxShadow:
+                  "0 0 0 1.5px hsl(46 65% 52% / 0.6), 0 20px 60px hsl(0 0% 0% / 0.65)",
+              }}
               transition={{ duration: 0.4 }}
             >
               <motion.img
@@ -102,7 +106,7 @@ export function Destinations() {
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{ transformOrigin: "center center" }}
                 whileHover={{ scale: 1.08 }}
-                transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 1.4, ease: "linear" as const }}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/28 to-black/18 transition-opacity duration-500" />
@@ -136,6 +140,7 @@ export function Destinations() {
                 whileHover={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
               />
+
               <motion.div
                 className="absolute inset-3 z-20 pointer-events-none"
                 style={{ boxShadow: "inset 0 0 50px hsl(46 65% 52% / 0.07)" }}
@@ -148,6 +153,7 @@ export function Destinations() {
                 <p className="text-primary uppercase tracking-[0.22em] text-[11px] mb-3 font-semibold">
                   {dest.hint}
                 </p>
+
                 <motion.h3
                   className="text-3xl md:text-4xl font-serif text-foreground mb-2 leading-tight"
                   whileHover={{ x: 4 }}
@@ -155,6 +161,7 @@ export function Destinations() {
                 >
                   {dest.name}
                 </motion.h3>
+
                 <p className="text-foreground/68 font-light mb-6 md:mb-8 text-sm leading-relaxed max-w-xs">
                   {dest.tagline}
                 </p>
@@ -169,7 +176,8 @@ export function Destinations() {
                     WebkitBackdropFilter: "blur(16px)",
                     border: "1px solid hsl(46 65% 52% / 0.58)",
                     color: "hsl(46 65% 52%)",
-                    boxShadow: "0 4px 22px hsl(0 0% 0% / 0.35), inset 0 1px 0 hsl(46 65% 52% / 0.12)",
+                    boxShadow:
+                      "0 4px 22px hsl(0 0% 0% / 0.35), inset 0 1px 0 hsl(46 65% 52% / 0.12)",
                   }}
                   data-testid={`book-now-${dest.id}`}
                 >
