@@ -111,7 +111,10 @@ export function Hero() {
           animate={{ opacity: 1, scaleX: 1 }}
           transition={{ duration: 1.2, delay: 0.2 }}
           className="w-16 h-[1px] mb-8"
-          style={{ background: "linear-gradient(90deg, transparent, hsl(46 65% 52%), transparent)" }}
+          style={{
+            background:
+              "linear-gradient(90deg, transparent, hsl(46 65% 52%), transparent)",
+          }}
         />
 
         <motion.p
@@ -127,12 +130,11 @@ export function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 45 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.3, delay: 0.6, ease: "easeInOut" }}
           className="text-[2.6rem] sm:text-5xl md:text-7xl lg:text-8xl font-serif text-foreground leading-[1.12] mb-6 md:mb-8"
           style={{ textShadow: "0 4px 30px hsl(0 0% 0% / 0.55)" }}
         >
-          Discover Africa{" "}
-          <br className="hidden md:block" />
+          Discover Africa <br className="hidden md:block" />
           <span className="italic text-primary">In Style, Naturally</span>
         </motion.h1>
 
@@ -142,7 +144,8 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.9 }}
           className="text-foreground/72 max-w-sm md:max-w-xl text-base md:text-xl font-light mb-10 md:mb-14 leading-relaxed px-2 md:px-0"
         >
-          Bespoke wilderness journeys crafted for the discerning few. Pure Africa, uncompromised luxury.
+          Bespoke wilderness journeys crafted for the discerning few. Pure
+          Africa, uncompromised luxury.
         </motion.p>
 
         <motion.div
@@ -158,11 +161,7 @@ export function Hero() {
           >
             Explore Destinations
           </a>
-          <a
-            href="#contact"
-            className="btn-glass"
-            data-testid="hero-book-btn"
-          >
+          <a href="#contact" className="btn-glass" data-testid="hero-book-btn">
             Book Your Safari
           </a>
         </motion.div>
@@ -175,7 +174,9 @@ export function Hero() {
         style={{ opacity: contentOpacity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-10"
       >
-        <span className="text-primary/55 uppercase tracking-[0.35em] text-[9px] mb-4">Scroll</span>
+        <span className="text-primary/55 uppercase tracking-[0.35em] text-[9px] mb-4">
+          Scroll
+        </span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
