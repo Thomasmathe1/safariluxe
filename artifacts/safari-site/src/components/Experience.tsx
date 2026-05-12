@@ -1,24 +1,36 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export function Experience() {
+  const { i18n } = useTranslation();
+
+  const isFrench = i18n.language === "fr";
+
   return (
-    <section id="experience" className="relative min-h-[65vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden py-20 md:py-0">
+    <section
+      id="experience"
+      className="relative min-h-[65vh] md:h-[80vh] w-full flex items-center justify-center overflow-hidden py-20 md:py-0"
+    >
       <div className="absolute inset-0 w-full h-full">
         <img
           src="/experience-new.jpg"
           alt="Cinematic African Safari"
           className="w-full h-full object-cover scale-105"
         />
+
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(180deg, hsl(0 0% 5% / 0.75) 0%, hsl(158 42% 7% / 0.55) 50%, hsl(0 0% 5% / 0.85) 100%)"
+            background:
+              "linear-gradient(180deg, hsl(0 0% 5% / 0.75) 0%, hsl(158 42% 7% / 0.55) 50%, hsl(0 0% 5% / 0.85) 100%)",
           }}
         />
+
         <div
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(ellipse 70% 80% at 50% 50%, transparent 30%, hsl(0 0% 4% / 0.5) 100%)"
+            background:
+              "radial-gradient(ellipse 70% 80% at 50% 50%, transparent 30%, hsl(0 0% 4% / 0.5) 100%)",
           }}
         />
       </div>
@@ -35,22 +47,28 @@ export function Experience() {
           style={{
             color: "hsl(46 65% 52%)",
             textShadow: "0 0 60px hsl(46 65% 52% / 0.4)",
-            lineHeight: 0.8
+            lineHeight: 0.8,
           }}
         >
           "
         </span>
+
         <h2 className="text-2xl md:text-5xl font-serif text-foreground leading-snug mb-8 md:mb-10">
-          The only man I envy is the man who has not yet been to Africa with SAFARILUXE, for he has so much to look forward to.
+          {isFrench
+            ? "Le seul homme que j’envie est celui qui n’a pas encore découvert l’Afrique avec SAFARILUXE, car tant de merveilles l’attendent."
+            : "The only man I envy is the man who has not yet been to Africa with SAFARILUXE, for he has so much to look forward to."}
         </h2>
+
         <div
           className="mx-auto mb-6"
           style={{
             width: "3rem",
             height: "1px",
-            background: "linear-gradient(90deg, transparent, hsl(46 65% 52%), transparent)"
+            background:
+              "linear-gradient(90deg, transparent, hsl(46 65% 52%), transparent)",
           }}
         />
+
         <p
           className="uppercase tracking-[0.3em] text-sm font-semibold"
           style={{ color: "hsl(46 65% 52%)" }}

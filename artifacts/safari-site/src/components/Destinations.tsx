@@ -1,60 +1,73 @@
 import { motion } from "framer-motion";
 import { useLocation } from "wouter";
-
-const destinations = [
-  {
-    id: "south-africa",
-    name: "South Africa",
-    tagline: "Where the Big Five roam the world's most celebrated wilderness.",
-    hint: "Tailored Luxury Experience",
-    image: "/sa-new.jpg",
-    flag: "🇿🇦",
-  },
-  {
-    id: "namibia",
-    name: "Namibia",
-    tagline: "Ancient dunes, celestial skies and silence beyond measure.",
-    hint: "Custom Safari Package",
-    image: "/na-new.jpg",
-    flag: "🇳🇦",
-  },
-  {
-    id: "botswana",
-    name: "Botswana",
-    tagline:
-      "The Okavango Delta — Africa's last great Eden, untouched and infinite.",
-    hint: "Bespoke Wilderness Journey",
-    image: "/bw-new.jpg",
-    flag: "🇧🇼",
-  },
-  {
-    id: "malawi",
-    name: "Malawi",
-    tagline: "Warm lakeshore sanctuaries where time dissolves into paradise.",
-    hint: "Affordable Luxury Package",
-    image: "/mw-new.jpg",
-    flag: "🇲🇼",
-  },
-];
-
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: { staggerChildren: 0.14 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.85, ease: "linear" as const },
-  },
-};
+import { useTranslation } from "react-i18next";
 
 export function Destinations() {
   const [, setLocation] = useLocation();
+  const { i18n } = useTranslation();
+
+  const isFrench = i18n.language === "fr";
+
+  const destinations = [
+    {
+      id: "south-africa",
+      name: "South Africa",
+      tagline: isFrench
+        ? "Là où les Big Five parcourent les plus grandes réserves sauvages du monde."
+        : "Where the Big Five roam the world's most celebrated wilderness.",
+      hint: isFrench
+        ? "Expérience de Luxe Sur Mesure"
+        : "Tailored Luxury Experience",
+      image: "/sa-new.jpg",
+      flag: "🇿🇦",
+    },
+    {
+      id: "namibia",
+      name: "Namibia",
+      tagline: isFrench
+        ? "Des dunes anciennes, des cieux étoilés et un silence infini."
+        : "Ancient dunes, celestial skies and silence beyond measure.",
+      hint: isFrench ? "Safari Personnalisé" : "Custom Safari Package",
+      image: "/na-new.jpg",
+      flag: "🇳🇦",
+    },
+    {
+      id: "botswana",
+      name: "Botswana",
+      tagline: isFrench
+        ? "Le Delta de l’Okavango — le dernier grand paradis sauvage d’Afrique."
+        : "The Okavango Delta — Africa's last great Eden, untouched and infinite.",
+      hint: isFrench ? "Voyage Exclusif" : "Bespoke Wilderness Journey",
+      image: "/bw-new.jpg",
+      flag: "🇧🇼",
+    },
+    {
+      id: "malawi",
+      name: "Malawi",
+      tagline: isFrench
+        ? "Des sanctuaires lacustres paisibles où le temps s’arrête."
+        : "Warm lakeshore sanctuaries where time dissolves into paradise.",
+      hint: isFrench ? "Luxe Accessible" : "Affordable Luxury Package",
+      image: "/mw-new.jpg",
+      flag: "🇲🇼",
+    },
+  ];
+
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: 0.14 },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.85, ease: "linear" as const },
+    },
+  };
 
   return (
     <section id="destinations" className="py-32 bg-background relative z-10">
@@ -67,12 +80,15 @@ export function Destinations() {
             transition={{ duration: 0.9, ease: "linear" as const }}
           >
             <div className="gold-divider mx-auto mb-8" />
+
             <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
-              Iconic Destinations
+              {isFrench ? "Destinations Iconiques" : "Iconic Destinations"}
             </h2>
+
             <p className="text-foreground/58 font-light leading-relaxed">
-              Journeys crafted with meticulous attention to detail, balancing
-              raw wilderness with uncompromising luxury.
+              {isFrench
+                ? "Des voyages conçus avec une attention méticuleuse, mêlant nature sauvage et luxe absolu."
+                : "Journeys crafted with meticulous attention to detail, balancing raw wilderness with uncompromising luxury."}
             </p>
           </motion.div>
         </div>
@@ -111,44 +127,6 @@ export function Destinations() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/28 to-black/18 transition-opacity duration-500" />
 
-              <motion.div
-                className="absolute inset-0"
-                style={{
-                  background:
-                    "linear-gradient(to top, hsl(158 42% 5% / 0.97) 0%, hsl(0 0% 0% / 0.22) 50%, transparent 100%)",
-                }}
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              />
-
-              <div
-                className="absolute top-5 left-5 px-3 py-1 text-sm z-30 rounded-full"
-                style={{
-                  background: "hsl(0 0% 0% / 0.52)",
-                  backdropFilter: "blur(14px)",
-                  border: "1px solid hsl(46 65% 52% / 0.22)",
-                }}
-              >
-                {dest.flag}
-              </div>
-
-              <motion.div
-                className="absolute inset-3 border z-20 pointer-events-none"
-                style={{ borderColor: "hsl(46 65% 52% / 0.55)" }}
-                initial={{ opacity: 0, scale: 0.97 }}
-                whileHover={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-              />
-
-              <motion.div
-                className="absolute inset-3 z-20 pointer-events-none"
-                style={{ boxShadow: "inset 0 0 50px hsl(46 65% 52% / 0.07)" }}
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              />
-
               <div className="absolute inset-0 p-7 md:p-9 flex flex-col justify-end z-30">
                 <p className="text-primary uppercase tracking-[0.22em] text-[11px] mb-3 font-semibold">
                   {dest.hint}
@@ -167,21 +145,14 @@ export function Destinations() {
                 </p>
 
                 <button
-                  className="w-full py-3.5 md:py-4 text-xs font-semibold uppercase tracking-[0.22em] transition-all duration-300
-                             opacity-100 translate-y-0
-                             md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0"
+                  className="w-full py-3.5 md:py-4 text-xs font-semibold uppercase tracking-[0.22em]"
                   style={{
                     background: "hsl(158 42% 10% / 0.38)",
-                    backdropFilter: "blur(16px)",
-                    WebkitBackdropFilter: "blur(16px)",
                     border: "1px solid hsl(46 65% 52% / 0.58)",
                     color: "hsl(46 65% 52%)",
-                    boxShadow:
-                      "0 4px 22px hsl(0 0% 0% / 0.35), inset 0 1px 0 hsl(46 65% 52% / 0.12)",
                   }}
-                  data-testid={`book-now-${dest.id}`}
                 >
-                  Discover More →
+                  {isFrench ? "Découvrir →" : "Discover More →"}
                 </button>
               </div>
             </motion.div>
