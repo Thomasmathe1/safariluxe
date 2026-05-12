@@ -238,6 +238,59 @@ export default function DestinationPage() {
           />
         </motion.div>
       </section>
+
+      <section className="py-24 px-6 bg-background">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-serif text-primary mb-12 text-center">
+            {isFrench ? "Points Forts" : "Highlights"}
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {dest.landmarks.map((landmark, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className="group overflow-hidden rounded-2xl bg-card border border-primary/10"
+              >
+                <div
+                  className="h-72 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  style={{
+                    backgroundImage: `url(${landmark.image || "/experience-new.jpg"})`,
+                  }}
+                />
+
+                <div className="p-6">
+                  <h3 className="text-2xl font-serif text-primary mb-3">
+                    {isFrench
+                      ? idx === 0
+                        ? "Safari de Luxe"
+                        : idx === 1
+                          ? "Expérience Exclusive"
+                          : "Beauté Naturelle"
+                      : landmark.name}
+                  </h3>
+
+                  <p className="text-foreground/70 leading-relaxed">
+                    {isFrench
+                      ? idx === 0
+                        ? "Découvrez la faune africaine avec des guides privés et des lodges luxueux."
+                        : idx === 1
+                          ? "Profitez d'expériences personnalisées conçues pour les voyageurs premium."
+                          : "Admirez des paysages à couper le souffle et des réserves naturelles magnifiques."
+                      : landmark.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <WhatsAppButton />
     </main>
   );
 }
