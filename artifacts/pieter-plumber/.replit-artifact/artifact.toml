@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/pieter-plumber/"
+title = "Pieter The Plumber"
+version = "1.0.0"
+id = "artifacts/pieter-plumber"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/pieter-plumber/" ]
+localPort = 21998
+
+[services.development]
+run = "pnpm --filter @workspace/pieter-plumber run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pieter-plumber", "run", "build" ]
+publicDir = "artifacts/pieter-plumber/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21998"
+BASE_PATH = "/pieter-plumber/"
